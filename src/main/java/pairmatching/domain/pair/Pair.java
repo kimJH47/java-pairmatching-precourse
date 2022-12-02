@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import pairmatching.domain.crew.Course;
 import pairmatching.domain.crew.Crew;
-import pairmatching.domain.crew.Mission;
 
 public class Pair {
     private final List<Crew> crews;

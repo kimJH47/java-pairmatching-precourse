@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import pairmatching.domain.crew.Course;
 import pairmatching.domain.crew.Crew;
 import pairmatching.domain.crew.CrewRepository;
-import pairmatching.domain.crew.Mission;
+import pairmatching.domain.pair.Mission;
 import pairmatching.domain.pair.Pair;
 import pairmatching.domain.pair.PairRepository;
 import pairmatching.dto.PairMatchingDto;

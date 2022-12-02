@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import pairmatching.domain.pair.Level;
+import pairmatching.domain.pair.Mission;
 
 public class Crew {
     private final Course course;

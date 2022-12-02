@@ -1,8 +1,8 @@
 package pairmatching.dto;
 
 import pairmatching.domain.crew.Course;
-import pairmatching.domain.crew.Level;
-import pairmatching.domain.crew.Mission;
+import pairmatching.domain.pair.Level;
+import pairmatching.domain.pair.Mission;
 
 public class PairMatchingDto {
     private final Course course;

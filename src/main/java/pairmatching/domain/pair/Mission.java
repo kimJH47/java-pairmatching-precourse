@@ -1,4 +1,4 @@
-package pairmatching.domain.crew;
+package pairmatching.domain.pair;
 
 
 import java.util.Arrays;
