@@ -22,6 +22,10 @@ public class Pair {
         return new Pair(Arrays.asList(crews), mission, course);
     }
 
+    public static Pair create(Mission mission, Course course, List<Crew> crews) {
+        return new Pair(crews, mission, course);
+    }
+
     public Pair addPaired() {
         crews.forEach(crew -> crew.addPairedCrew(mission, crews));
         return this;
