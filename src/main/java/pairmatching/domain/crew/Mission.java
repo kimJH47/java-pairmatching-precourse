@@ -31,6 +31,10 @@ public enum Mission {
                 .orElseThrow(IllegalArgumentException::new);
     }
 
+    public Level getLevel() {
+        return level;
+    }
+
     @Override
     public String toString() {
         return name;
