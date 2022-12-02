@@ -12,9 +12,9 @@ import pairmatching.domain.pair.PairRepository;
 import pairmatching.dto.PairMatchingDto;
 import pairmatching.dto.PairResultDto;
 import pairmatching.exception.ErrorCode;
-import pairmatching.policy.DefaultPairMatchingPolicy;
-import pairmatching.policy.OddCrewsPairMatchingPolicy;
-import pairmatching.policy.PairMatchingPolicy;
+import pairmatching.service.policy.DefaultPairMatchingPolicy;
+import pairmatching.service.policy.OddCrewsPairMatchingPolicy;
+import pairmatching.service.policy.PairMatchingPolicy;
 import pairmatching.utils.PairUtils;
 
 public class PairMatchingService {

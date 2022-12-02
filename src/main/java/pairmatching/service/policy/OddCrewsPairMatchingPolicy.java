@@ -1,4 +1,4 @@
-package pairmatching.policy;
+package pairmatching.service.policy;
 
 import java.util.ArrayList;
 import java.util.List;
