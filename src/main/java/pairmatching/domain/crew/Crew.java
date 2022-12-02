@@ -1,15 +1,14 @@
 package pairmatching.domain.crew;
 
-import java.util.ArrayList;
-import java.util.List;
-import org.assertj.core.util.Lists;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Crew {
     private final Level level;
     private final Course course;
     private final String name;
 
-    private final List<String> pairedCrews = new ArrayList<>();
+    private final Map<Mission, String> pairedCrews = new HashMap<>();
 
     private Crew(Level level, Course course, String name) {
         this.level = level;
@@ -20,8 +19,6 @@ public class Crew {
     public static Crew create(Level level, Course course, String name) {
         return new Crew(level, course, name);
     }
-
-
 
 
 }
