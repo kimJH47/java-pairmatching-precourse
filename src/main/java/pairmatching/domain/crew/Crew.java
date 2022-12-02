@@ -4,20 +4,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Crew {
-    private final Level level;
     private final Course course;
     private final String name;
 
     private final Map<Mission, String> pairedCrews = new HashMap<>();
 
-    private Crew(Level level, Course course, String name) {
-        this.level = level;
+    private Crew(Course course, String name) {
         this.course = course;
         this.name = name;
     }
 
-    public static Crew create(Level level, Course course, String name) {
-        return new Crew(level, course, name);
+    public static Crew create(Course course, String name) {
+        return new Crew(course, name);
     }
 
 
