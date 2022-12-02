@@ -31,5 +31,18 @@ public class Pair {
         return this;
     }
 
+    public List<String> getPairCrewsName() {
+        return crews.stream()
+                .map(Crew::getName)
+                .collect(Collectors.toList());
+    }
+    public boolean isSameCourse(Course course) {
+        return this.course.equals(course);
+    }
+
+    public boolean isSameMission(Mission mission) {
+        return this.mission.equals(mission);
+    }
+
 
 }
