@@ -10,6 +10,7 @@ import pairmatching.domain.crew.Mission;
 import pairmatching.domain.pair.Pair;
 import pairmatching.domain.pair.PairRepository;
 import pairmatching.dto.PairMatchingDto;
+import pairmatching.dto.PairResultDto;
 import pairmatching.exception.ErrorCode;
 import pairmatching.policy.DefaultPairMatchingPolicy;
 import pairmatching.policy.OddCrewsPairMatchingPolicy;
@@ -68,4 +69,11 @@ public class PairMatchingService {
     }
 
     //페어매칭 조회
+    private PairResultDto findByMission(PairMatchingDto pairMatchingDto) {
+        Course course = pairMatchingDto.getCourse();
+        Mission mission = pairMatchingDto.getMission();
+        List<Pair> pairs = pairRepository.findByCourseAndMission(course, mission);
+        return PairResultDto.create(pairs);
+
+    }
 }
