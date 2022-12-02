@@ -7,6 +7,6 @@ public class PairRepository {
     private final List<Pair> pairs = new ArrayList<>();
 
     public void save(final List<Pair> pairs) {
-        pairs.addAll(pairs);
+        this.pairs.addAll(pairs);
     }
 }
