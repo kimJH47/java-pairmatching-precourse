@@ -16,4 +16,8 @@ public class PairUtils {
     public static boolean isOverTryCount(int count) {
         return count != 3;
     }
+
+    public static List<Crew> getLastCrew(List<Crew> shuffledCrews) {
+        return shuffledCrews.subList(shuffledCrews.size() - 3, 3);
+    }
 }
