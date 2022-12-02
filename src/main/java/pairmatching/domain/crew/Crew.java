@@ -30,6 +30,12 @@ public class Crew {
         return crews.contains(crew);
     }
 
+
+    //refactoring -> toString vs getName
+    public String getName() {
+        return name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
