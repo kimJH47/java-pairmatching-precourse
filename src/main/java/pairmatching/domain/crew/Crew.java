@@ -47,8 +47,12 @@ public class Crew {
         return Objects.hash(course, name);
     }
 
-    public void addPairedCrew(Mission mission, Crew crew) {
+    public void addPairedCrew(Mission mission, List<Crew> pairedCrew) {
         List<Crew> crews = pairedCrews.get(mission.getLevel());
-        crews.add(crew);
+        for (Crew crew : pairedCrew) {
+            if (!crew.equals(this)) {
+                crews.add(crew);
+            }
+        }
     }
 }
