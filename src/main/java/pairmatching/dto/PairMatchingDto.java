@@ -27,10 +27,6 @@ public class PairMatchingDto {
         return course;
     }
 
-    public Level getLevel() {
-        return level;
-    }
-
     public Mission getMission() {
         return mission;
     }
