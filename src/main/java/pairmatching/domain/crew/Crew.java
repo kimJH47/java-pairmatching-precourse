@@ -8,7 +8,7 @@ public class Crew {
     private final Course course;
     private final String name;
 
-    private final Map<Mission, String> pairedCrews = new HashMap<>();
+    private final Map<Level, List<Crew>> pairedCrews = new HashMap<>();
 
     private Crew(Course course, String name) {
         this.course = course;
