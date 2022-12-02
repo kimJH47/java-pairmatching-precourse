@@ -1,6 +1,7 @@
 package pairmatching.domain.crew;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -19,6 +20,16 @@ public class Crew {
         return new Crew(course, name);
     }
 
+
+    public boolean isSameCourse(Course course) {
+        return this.course.equals(course);
+    }
+
+    public boolean isPaired(Level level, Crew crew) {
+        List<Crew> crews = this.pairedCrews.get(level);
+        return crews.contains(crew);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -34,9 +45,5 @@ public class Crew {
     @Override
     public int hashCode() {
         return Objects.hash(course, name);
-    }
-
-    public boolean isSameCourse(Course course) {
-        return this.course.equals(course);
     }
 }
