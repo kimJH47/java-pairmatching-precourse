@@ -46,4 +46,9 @@ public class Crew {
     public int hashCode() {
         return Objects.hash(course, name);
     }
+
+    public void addPairedCrew(Mission mission, Crew crew) {
+        List<Crew> crews = pairedCrews.get(mission.getLevel());
+        crews.add(crew);
+    }
 }
