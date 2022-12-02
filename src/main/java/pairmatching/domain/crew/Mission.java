@@ -1,11 +1,13 @@
 package pairmatching.domain.crew;
 
 
+import java.util.Arrays;
+
 public enum Mission {
 
-    CAR_RACE(Level.ONE,"자동차경주"),
-    LOTTO(Level.ONE,"로또"),
-    BASEBALL(Level.ONE,"숫자야구게임"),
+    CAR_RACE(Level.ONE, "자동차경주"),
+    LOTTO(Level.ONE, "로또"),
+    BASEBALL(Level.ONE, "숫자야구게임"),
     CART(Level.TWO, "장바구니"),
     PAYMENT(Level.TWO, "결제"),
     SUBWAY_MAP(Level.TWO, "지하철노선도"),
@@ -21,7 +23,13 @@ public enum Mission {
         this.name = name;
     }
 
-    //생성메서드 구현
+    public static Mission create(Level level, String inputMission) {
+        return Arrays.stream(Mission.values())
+                .filter(mission -> mission.level.equals(level))
+                .filter(mission -> mission.name.equals(inputMission))
+                .findAny()
+                .orElseThrow(IllegalArgumentException::new);
+    }
 
     @Override
     public String toString() {
